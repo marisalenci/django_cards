@@ -20,5 +20,6 @@ from cards import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('game/', views.game, name='game'),
+    path('game/', views.create_game, name='game'),
+    path('game/<game_id>', views.play_game, name='play-game'),
 ]
