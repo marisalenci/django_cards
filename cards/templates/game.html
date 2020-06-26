@@ -1,0 +1,29 @@
+<html>
+    <h1>New Game</h1>
+    <p>Players in Game: {{ player }}</p>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <select name="Player 1">
+            {% for player in other_players %}
+                <option value="{{ player.id }}">
+                    {{ player }}
+                </option>
+            {% endfor %}
+        </select>
+        <select name="Player 2">
+            {% for player in other_players %}
+                <option value="{{ player.id }}">
+                    {{ player }}
+                </option>
+            {% endfor %}
+        </select>
+        <select name="Player 3">
+            {% for player in other_players %}
+                <option value="{{ player.id }}">
+                    {{ player }}
+                </option>
+            {% endfor %}
+        </select>
+        <input type="submit">
+    </form>
+</html>
